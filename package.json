@@ -1,0 +1,22 @@
+{
+  "name": "e-commerce-website",
+  "version": "1.0.0",
+  "description": "Ecommerce Website",
+  "main": "server.js",
+  "scripts": {
+    "start": "node backend/server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Huzefa1413/E-commerce-Website.git"
+  },
+  "author": "Huzefa",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Huzefa1413/E-commerce-Website/issues"
+  },
+  "homepage": "https://github.com/Huzefa1413/E-commerce-Website#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
