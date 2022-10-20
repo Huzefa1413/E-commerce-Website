@@ -1,10 +1,10 @@
 import React from 'react'
+import Rating from '../Rating'
+import axios from 'axios'
 import { Link } from 'react-router-dom';
 import { Row, Col, Image, ListGroup, Card, Button } from 'react-bootstrap'
-import Rating from '../Rating'
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from 'react';
-import axios from 'axios'
 
 const ProductScreen = (props) => {
     const { id } = useParams();
@@ -15,7 +15,7 @@ const ProductScreen = (props) => {
             setProduct(data);
         }
         fetchProduct();
-    }, []);
+    }, [id]);
     return (
         <>
             <Link className='btn btn-light my-3' to='/'>

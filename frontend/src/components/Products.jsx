@@ -1,7 +1,8 @@
-import React from 'react'
-import { Card } from 'react-bootstrap'
-import Rating from './Rating'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import Rating from './Rating';
+import { Card } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+
 const Products = ({ product }) => {
     return (
         <Card className='my-3 p-3 rounded'>
@@ -16,12 +17,9 @@ const Products = ({ product }) => {
                     <Rating value={product.rating} text={`${product.numReviews} reviews`} />
                 </Card.Text>
                 <Card.Text as='h3' className='productPrice'>${product.price}</Card.Text>
-
             </Card.Body>
-
-
         </Card>
     )
 }
 
-export default Products
+export default Products;

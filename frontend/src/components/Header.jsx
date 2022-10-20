@@ -1,6 +1,7 @@
-import React from 'react'
+import React from 'react';
 import { Container, Navbar, Nav } from 'react-bootstrap';
-import { LinkContainer } from 'react-router-bootstrap'
+import { LinkContainer } from 'react-router-bootstrap';
+
 const Header = () => {
     return (
         <header> <Navbar bg="dark" variant='dark' expand="lg" collapseOnSelect>
@@ -24,4 +25,4 @@ const Header = () => {
     )
 }
 
-export default Header
+export default Header;
