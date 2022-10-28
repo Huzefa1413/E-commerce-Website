@@ -3,7 +3,7 @@ import Product from '../Products'
 import { Row, Col } from 'react-bootstrap'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { listProducts } from '../../actions/productAction.js'
+import { listProducts } from '../../actions/productActions.js'
 import Message from '../Message.jsx'
 import Loader from '../Loader.jsx'
 const HomeScreen = () => {
