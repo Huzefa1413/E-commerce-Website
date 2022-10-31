@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useParams, useNavigate, useLocation } from 'react-router-dom'
 import { Row, Col, ListGroup, Image, Form, Button, Card } from 'react-bootstrap'
-import Message from '../Message.jsx'
-import { addToCart, removeFromCart } from '../../actions/cartActions.js'
+import Message from '../components/Message.jsx'
+import { addToCart, removeFromCart } from '../actions/cartActions.js'
 
 const CartScreen = () => {
     const { id } = useParams();

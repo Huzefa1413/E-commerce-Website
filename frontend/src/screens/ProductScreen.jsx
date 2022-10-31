@@ -1,13 +1,13 @@
 import React from 'react'
-import Rating from '../Rating'
 import { Link, useNavigate } from 'react-router-dom';
 import { Row, Col, Image, ListGroup, Card, Button, Form } from 'react-bootstrap'
 import { useParams } from "react-router-dom";
 import { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { listProductDetails } from '../../actions/productActions.js';
-import Loader from '../Message.jsx';
-import Message from '../Message.jsx'
+import { listProductDetails } from '../actions/productActions.js';
+import Rating from '../components/Rating'
+import Loader from '../components/Loader.jsx';
+import Message from '../components/Message.jsx'
 
 const ProductScreen = () => {
 
