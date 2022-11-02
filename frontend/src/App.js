@@ -9,6 +9,7 @@ import RegisterScreen from "./screens/RegisterScreen.jsx";
 import ProfileScreen from "./screens/ProfileScreen.jsx";
 import ShippingScreen from "./screens/ShippingScreen.jsx";
 import PaymentScreen from "./screens/PaymentScreen.jsx";
+import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 
 import { Container } from 'react-bootstrap'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -29,6 +30,7 @@ const App = () => {
             <Route path='/profile' element={<ProfileScreen />} />
             <Route path='/shipping' element={<ShippingScreen />} />
             <Route path='/payment' element={<PaymentScreen />} />
+            <Route path='/placeorder' element={<PlaceOrderScreen />} />
           </Routes>
         </Container>
       </main>
