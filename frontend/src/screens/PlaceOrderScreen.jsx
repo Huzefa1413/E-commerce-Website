@@ -28,10 +28,9 @@ const PlaceOrderScreen = () => {
     useEffect(() => {
         if (success) {
             // eslint-disable-next-line
-            console.log(order)
             navigate(`/order/${order._id}`)
         }
-    }, [navigate, success, order_id])
+    }, [navigate, success])
 
     const placeOrderHandler = () => {
         dispatch(createOrder({
