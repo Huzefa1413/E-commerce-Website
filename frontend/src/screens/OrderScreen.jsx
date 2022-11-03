@@ -19,7 +19,7 @@ const OrderScreen = () => {
 
     useEffect(() => {
         dispatch(getOrderDetails(orderId))
-    }, [])
+    }, [dispatch, orderId])
     if (!loading) {
         const addDecimals = (num) => {
             return (Math.round(num * 100) / 100).toFixed(2)
