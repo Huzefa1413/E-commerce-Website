@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import axios from 'axios'
 import { PayPalButton } from 'react-paypal-button-v2'
-import { Button, Row, Col, ListGroup, Image, Card } from 'react-bootstrap'
+import { Row, Col, ListGroup, Image, Card } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
@@ -15,6 +15,7 @@ const OrderScreen = () => {
     const orderId = id;
 
     const [sdkReady, setSdkReady] = useState(false)
+
     const dispatch = useDispatch();
 
     const orderDetails = useSelector(state => state.orderDetails);
@@ -22,6 +23,14 @@ const OrderScreen = () => {
 
     const orderPay = useSelector(state => state.orderPay);
     const { loading: loadingPay, success: successPay } = orderPay;
+
+    if (!loading) {
+        const addDecimals = (num) => {
+            return (Math.round(num * 100) / 100).toFixed(2)
+        }
+        order.itemsPrice = addDecimals(order.orderItems.reduce(
+            (acc, item) => acc + item.price * item.qty, 0))
+    }
 
     useEffect(() => {
         const addPayPalScript = async () => {
@@ -46,16 +55,9 @@ const OrderScreen = () => {
             }
         }
     }, [dispatch, orderId, successPay, order])
-    if (!loading) {
-        const addDecimals = (num) => {
-            return (Math.round(num * 100) / 100).toFixed(2)
-        }
-        order.itemsPrice = addDecimals(order.orderItems.reduce(
-            (acc, item) => acc + item.price * item.qty, 0))
-    }
+
 
     const successPaymentHandler = (paymentResult) => {
-        console.log(paymentResult)
         dispatch(payOrder(orderId, paymentResult))
     }
 
