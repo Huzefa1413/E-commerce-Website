@@ -11,6 +11,7 @@ import ShippingScreen from "./screens/ShippingScreen.jsx";
 import PaymentScreen from "./screens/PaymentScreen.jsx";
 import PlaceOrderScreen from "./screens/PlaceOrderScreen";
 import OrderScreen from "./screens/OrderScreen";
+import UserListScreen from "./screens/UserListScreen.jsx";
 
 import { Container } from 'react-bootstrap'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
@@ -33,6 +34,7 @@ const App = () => {
             <Route path='/payment' element={<PaymentScreen />} />
             <Route path='/placeorder' element={<PlaceOrderScreen />} />
             <Route path='/order/:id' element={<OrderScreen />} />
+            <Route path='/admin/userlist' element={<UserListScreen />} />
           </Routes>
         </Container>
       </main>
