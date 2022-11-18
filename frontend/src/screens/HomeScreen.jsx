@@ -8,6 +8,7 @@ import Product from '../components/Products'
 import Message from '../components/Message.jsx'
 import Loader from '../components/Loader.jsx'
 import Paginate from '../components/Paginate.jsx'
+import ProductCarousel from '../components/ProductCarousel.jsx'
 
 const HomeScreen = () => {
 
@@ -23,6 +24,7 @@ const HomeScreen = () => {
 
     return (
         <>
+            {!keyword && <ProductCarousel />}
             <h1>Latest Products</h1>
             {loading ? <Loader /> : error ? (<Message variant='danger'>{error}</Message>) :
                 <>
