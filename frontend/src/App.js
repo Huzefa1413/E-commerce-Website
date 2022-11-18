@@ -28,6 +28,7 @@ const App = () => {
         <Container className="py-3">
           <Routes>
             <Route path='/' element={<HomeScreen />} exact />
+            <Route path='/search/:keyword' element={<HomeScreen />} exact />
             <Route path='/product/:id' element={<ProductScreen />} />
             <Route path='/cart' element={<CartScreen />} />
             <Route path='/cart/:id' element={<CartScreen />} />
