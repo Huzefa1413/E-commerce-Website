@@ -22,6 +22,10 @@
     "redux-thunk": "^2.4.1",
     "web-vitals": "^2.1.4"
   },
+  "peerDependencies": {
+    "react": "16.8.x",
+    "react-dom": "16.8.x"
+  },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
