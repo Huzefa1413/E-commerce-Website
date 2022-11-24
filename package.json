@@ -4,6 +4,9 @@
   "description": "Ecommerce Website",
   "main": "server.js",
   "type": "module",
+  "engines": {
+    "node": "19.x"
+  },
   "scripts": {
     "start": "node backend/server",
     "server": "nodemon backend/server",
